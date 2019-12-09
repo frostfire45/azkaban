@@ -4,18 +4,27 @@
 
 ## Pre-Req
 ```
-dnf install gradle
+# 1) Ensure java jdk has been installed.
+To install on a new system, export java's installed jdk.
+
+If install via dnf, yum.
+export /usr/java/<version>   # version is which ever version was installed. Tab will generall produce the results. 
+
 ```
 ## Clone Git
 ```
 git clone https://github.com/frostfire45/azkaban.git
+cd azkaban
 ```
 ## Build
-Azkaban builds use Gradle and requires Java 8 or higher.
+Ensure the export of JAVA_HOME has been exported. 
 
 The following set of commands run on *nix platforms like Linux, OS X.
 
 ```
+# Ensure there are no complications
+./gradlew
+
 # Build Azkaban
 ./gradlew build
 
